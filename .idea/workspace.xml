@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a44ce480-c7ba-486c-b5e4-f40315204045" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/constants/urlconstants.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/controllers/routers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/controllers/url.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/db/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/entity/url.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/middlewares/request.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/middlewares/response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/utils/stringutils.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/prepare_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/url_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/controllers/url.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/url.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

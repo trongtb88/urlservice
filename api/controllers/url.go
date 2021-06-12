@@ -54,7 +54,7 @@ func (server * Server) Shorten(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		if !uniqueShortCode {
-			middlewares.ErrorResponse(w, http.StatusConflict, nil, "Error on check short code unique")
+			middlewares.ErrorResponse(w, http.StatusConflict, nil, "The the desired shortcode is already in use. Shortcodes are case-sensitive")
 			return
 		}
 	} else {

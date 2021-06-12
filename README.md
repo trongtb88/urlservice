@@ -44,8 +44,22 @@ curl --location --request POST 'http://localhost:8023/shorten' \
 6. If have some logs at console like, server started and worked successfully
 
 ```sh
-
-
+url_db_mysql | 2021-06-12T00:58:18.651302Z 0 [Note] Server socket created on IP: '::'.
+url_db_mysql | 2021-06-12T00:58:18.652368Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+url_db_mysql | 2021-06-12T00:58:18.653396Z 0 [Warning] 'user' entry 'root@url-mysql' ignored in --skip-name-resolve mode.
+url_db_mysql | 2021-06-12T00:58:18.661800Z 0 [Note] Event Scheduler: Loaded 0 events
+url_db_mysql | 2021-06-12T00:58:18.662171Z 0 [Note] mysqld: ready for connections.
+url_db_mysql | Version: '5.7.34'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+shorty_app   | We are connected to the mysql database
+shorty_app   | 2021/06/12 00:58:19 /app/api/db/config.go:34
+shorty_app   | [1.759ms] [rows:-] SELECT DATABASE()
+shorty_app   | 
+shorty_app   | 2021/06/12 00:58:19 /app/api/db/config.go:34
+shorty_app   | [3.334ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'url_db' AND table_name = 'urls' AND table_type = 'BASE TABLE'
+shorty_app   | 
+shorty_app   | 2021/06/12 00:58:19 /app/api/db/config.go:34
+shorty_app   | [8.796ms] [rows:0] CREATE TABLE `urls` (`origin_url` varchar(200),`short_code` varchar(6),`redirect_count` bigint,`created_at` datetime(3) NULL,`updated_at` datetime(3) NULL,`last_seen_at` datetime(3) NULL,PRIMARY KEY (`short_code`))
+shorty_app   | 2021/06/12 00:58:19 Listening to port 8023
 ```
 
 7. Go to Postman, import like that
