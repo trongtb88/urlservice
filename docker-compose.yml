@@ -1,0 +1,40 @@
+version: '3'
+services:
+  app:
+    container_name: shorty_app
+    build: .
+    ports:
+      - 8023:8023
+    restart: on-failure
+    volumes:
+      - api:/usr/src/app/
+    depends_on:
+      - url-mysql
+    networks:
+      - urlnetwork
+
+
+  url-mysql:
+    image: mysql:5.7
+    container_name: url_db_mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_HOST=${DB_HOST}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - database_mysql:/var/lib/mysql
+    networks:
+      - urlnetwork
+
+volumes:
+  api:
+  database_mysql:
+
+networks:
+  urlnetwork:
+    driver: bridge
+
