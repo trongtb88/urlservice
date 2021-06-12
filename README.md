@@ -81,7 +81,6 @@ curl --location --request POST 'http://localhost:8023/shorten' \
 4. Create database test_url_db by yourself
 5.  Go to terminal at root of project
 ```sh
-   cd tests
    go test ./tests
 ```
 6. If you see some logs like, mean tests passed.
@@ -89,7 +88,6 @@ curl --location --request POST 'http://localhost:8023/shorten' \
 ```sh
  go test ./tests
 ok      github.com/trongtb88/urlservice/tests   2.022s
-
 
 ```
 
