@@ -9,7 +9,7 @@ The service for Shorten URL in Golang
 5.  Go to terminal at root of project
 ```sh
    go get .    
-   go main run
+   go run main.go
 ```
 
 6. If have some logs at console like, server started and workded successfully
