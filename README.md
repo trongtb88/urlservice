@@ -19,7 +19,7 @@ The service for Shorten URL in Golang
 ```
 
 7. Go to Postman, import like that, run and get response 200 means work correctly
-
+ - API shorten
 ```
 curl --location --request POST 'http://localhost:8023/shorten' \
 --header 'Content-Type: application/json' \
@@ -28,6 +28,17 @@ curl --location --request POST 'http://localhost:8023/shorten' \
     "shortcode" : "66778b"
 }'
 ```
+- API Redirect ( note : paste to browser to see Redirect to destination API)
+
+```
+curl --location --request GET 'http://localhost:8023/66778b'
+```
+
+- API Stats Count Redirect
+```
+curl --location --request GET 'http://localhost:8023/66778b/stats'
+```
+
 
 
 ## How to run this service at docker
