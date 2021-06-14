@@ -14,11 +14,25 @@ The service for Shorten URL in Golang
 
 6. If have some logs at console like, server started and workded successfully
 
-```sh
+```
+We are getting the env values
+We are connected to the mysql database
+2021/06/14 16:34:19 /Users/trtran/SProjects/urlservice/api/db/config.go:34
+[0.121ms] [rows:-] SELECT DATABASE()
+
+2021/06/14 16:34:19 /Users/trtran/SProjects/urlservice/api/db/config.go:34
+[111.147ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'url_db' AND table_name = 'urls' AND table_type = 'BASE TABLE'
+
+2021/06/14 16:34:19 /Users/trtran/go/pkg/mod/gorm.io/driver/mysql@v1.0.5/migrator.go:194
+[0.392ms] [rows:-] SELECT DATABASE()
+
+2021/06/14 16:34:19 /Users/trtran/go/pkg/mod/gorm.io/driver/mysql@v1.0.5/migrator.go:203
+[4.464ms] [rows:-] SELECT column_name, is_nullable, data_type, character_maximum_length, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'url_db' AND table_name = 'urls'
+2021/06/14 16:34:19 Listening to port 8023
 
 ```
 
-7. Go to Postman, import like that, run and get response 200 means work correctly
+7. Go to Postman, import like that, run and get response http status code = 201 means work correctly
  - API shorten
 ```
 curl --location --request POST 'http://localhost:8023/shorten' \
